@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- ==================== TREE VIEW ==================== -->
+        <record id="view_education_student_tree" model="ir.ui.view">
+            <field name="name">education.student.tree</field>
+            <field name="model">education.student</field>
+            <field name="arch" type="xml">
+                <list string="Education Student" >
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="age"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                    <field name="gender"/>
+                    <field name="dob"/>
+                    <field name="address"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- ==================== FORM VIEW ==================== -->
+        <record id="view_education_student_form" model="ir.ui.view">
+            <field name="name">education.student.form</field>
+            <field name="model">education.student</field>
+            <field name="arch" type="xml">
+                <form string="Education Student">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                                <field name="dob"/>
+                                <field name="age"/>
+                            </group>
+                            <group>
+                                <field name="phone"/>
+                                <field name="email"/>
+                                <field name="gender"/>
+                                <field name="address"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ==================== SEARCH VIEW ==================== -->
+        <record id="view_education_student_search" model="ir.ui.view">
+            <field name="name">education.student.search</field>
+            <field name="model">education.student</field>
+            <field name="arch" type="xml">
+                <search string="Students">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="age"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                    <field name="gender"/>
+                    <field name="dob"/>
+                    <field name="address"/>
+                    <!-- <group expand="0" string="Group By">
+                        <filter name="group_by_student" string="Student" context="{'group_by': 'student_id'}"/>
+                    </group> -->
+                </search>
+            </field>
+        </record>
+
+        <!-- ==================== WINDOW ACTION ==================== -->
+        <record id="action_education_student" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="res_model">education.student</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_education_student_search"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create the first Student.
+                </p>
+            </field>
+        </record>
+
+        <!-- ==================== MENU ITEMS ==================== -->
+
+        <!-- Root menu (you can change parent to your education module menu if you have one) -->
+        <menuitem id="menu_education"
+                  name="Education"
+                  sequence="10" web_icon="education,static/description/icon.png"/>
+
+        <!-- Sub menu to open Student Log Notes -->
+        <menuitem id="menu_education_student"
+                  name="Students"
+                  parent="menu_education"
+                  action="action_education_student"
+                  sequence="20"/>
+
+    </data>
+</odoo>
