@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Tree View -->
+        <record id="view_education_batch_tree" model="ir.ui.view">
+            <field name="name">education.batch.tree</field>
+            <field name="model">education.batch</field>
+            <field name="arch" type="xml">
+                <list string="Batch Tree">
+                    <field name="batchName"/>
+                    <field name="batchCode"/>
+                    <field name="batchStartDate"/>
+                    <field name="batchEndDate"/>
+                    <field name="batchCapicity"/>
+                    <field name="batchDescription"/>
+                    <field name="batchActive"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form view -->
+        <record id="view_education_batch_form" model="ir.ui.view">
+            <field name="name">education.batch.form</field>
+            <field name="model">education.batch</field>
+            <field name="arch" type="xml">
+                <form string="Batch Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="batchName"/>
+                                <field name="batchCode"/>
+                                <field name="batchStartDate"/>
+                                <field name="batchEndDate"/>
+                            </group>
+                            <group>
+                                <field name="batchCapicity"/>
+                                <field name="batchDescription"/>
+                                <field name="batchActive"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search view -->
+        <record id="view_education_batch_search" model="ir.ui.view">
+            <field name="name">education.batch.search</field>
+            <field name="model">education.batch</field>
+            <field name="arch" type="xml">
+                <search string="Batch Search">
+                    <field name="batchName"/>
+                    <field name="batchCode"/>
+                    <field name="batchStartDate"/>
+                    <field name="batchEndDate"/>
+                    <field name="batchCapicity"/>
+                    <field name="batchDescription"/>
+                    <field name="batchActive"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- window action -->
+        <record id="action_education_batch" model="ir.actions.act_window">
+            <field name="name">Batch</field>
+            <field name="res_model">education.batch</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_education_batch_search"></field>
+            <field name="help" type="html">
+                <p class="o_view_noncontent_smiling_face">
+                    Create the first batch
+                </p>
+            </field>
+        </record>
+
+        <!-- menu item -->
+        <menuitem id="menu_education"
+                  name="Education"
+                  sequence="10" web_icon="education,static/description/icon.png"/>
+                  
+
+        <!-- Sub menu to open Student Log Notes -->
+        <menuitem id="menu_education_batch"
+                  name="Batch"
+                  parent="menu_education"
+                  action="action_education_batch"
+                  sequence="22"/>
+
+    </data>
+</odoo>

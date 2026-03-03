@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Tree View -->
+        <record id="view_education_program_tree" model="ir.ui.view">
+            <field name="name">education.program.tree</field>
+            <field name="model">education.program</field>
+            <field name="arch" type="xml">
+                <list string="Batch Tree">
+                    <field name="programName"/>
+                    <field name="programCode"/>
+                    <field name="programText"/>
+                    <field name="programDuration"/>
+                    <field name="programLevel"/>
+                    <field name="programActive"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form view -->
+        <record id="view_education_program_form" model="ir.ui.view">
+            <field name="name">education.program.form</field>
+            <field name="model">education.program</field>
+            <field name="arch" type="xml">
+                <form string="Batch Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="programName"/>
+                                <field name="programCode"/>
+                                <field name="programText"/>
+                                <field name="programDuration"/>
+                            </group>
+                            <group>
+                                <field name="programLevel"/>
+                                <field name="programActive"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search view -->
+        <record id="view_education_program_search" model="ir.ui.view">
+            <field name="name">education.program.search</field>
+            <field name="model">education.program</field>
+            <field name="arch" type="xml">
+                <search string="Batch Search">
+                    <field name="programName"/>
+                    <field name="programCode"/>
+                    <field name="programText"/>
+                    <field name="programDuration"/>
+                    <field name="programLevel"/>
+                    <field name="programActive"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- window action -->
+        <record id="action_education_program" model="ir.actions.act_window">
+            <field name="name">Batch</field>
+            <field name="res_model">education.program</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_education_program_search"></field>
+            <field name="help" type="html">
+                <p class="o_view_noncontent_smiling_face">
+                    Create the first batch
+                </p>
+            </field>
+        </record>
+
+        <!-- menu item -->
+        <menuitem id="menu_education"
+                  name="Education"
+                  sequence="10" web_icon="education,static/description/icon.png"/>
+                  
+
+        <!-- Sub menu to open Student Log Notes -->
+        <menuitem id="menu_education_program"
+                  name="Program"
+                  parent="menu_education"
+                  action="action_education_program"
+                  sequence="23"/>
+
+    </data>
+</odoo>

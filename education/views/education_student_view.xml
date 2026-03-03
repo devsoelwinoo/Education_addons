@@ -94,5 +94,6 @@
                   action="action_education_student"
                   sequence="20"/>
 
+
     </data>
 </odoo>
