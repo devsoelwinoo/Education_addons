@@ -5,7 +5,8 @@ class educationLecture(models.Model):
     _description = "Lecture"
 
     title = fields.Char(string="Name",required=True)
-    lectureCode = fields.Char(string="Code",required=True)
+    lectureCode = fields.Char(string="Code",required=True,unique=True)
+    batch_id = fields.Many2one("education.batch",string = "Batch ID")
     startDate = fields.Date(string="Start Date")
     endDate = fields.Date(string="End Date")
     duration = fields.Integer(string="Duration")

@@ -10,6 +10,7 @@
                 <list string="Education Student" >
                     <field name="name"/>
                     <field name="code"/>
+                    <field name="batch_id"/>
                     <field name="age"/>
                     <field name="phone"/>
                     <field name="email"/>
@@ -31,6 +32,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="code"/>
+                                <field name="batch_id"/>
                                 <field name="dob"/>
                                 <field name="age"/>
                             </group>
@@ -54,6 +56,7 @@
                 <search string="Students">
                     <field name="name"/>
                     <field name="code"/>
+                    <field name="batch_id"/>
                     <field name="age"/>
                     <field name="phone"/>
                     <field name="email"/>

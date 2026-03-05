@@ -10,6 +10,7 @@
                 <list string="Education Student" >
                     <field name="title"/>
                     <field name="lectureCode"/>
+                    <field name="batch_id"/>
                     <field name="startDate"/>
                     <field name="endDate"/>
                     <field name="duration"/>
@@ -31,6 +32,7 @@
                             <group>
                                 <field name="title"/>
                                 <field name="lectureCode"/>
+                                <field name="batch_id"/>
                                 <field name="startDate"/>
                                 <field name="endDate"/>
                             </group>
@@ -54,6 +56,7 @@
                 <search string="Students">
                     <field name="title"/>
                     <field name="lectureCode"/>
+                    <field name="batch_id"/>
                     <field name="startDate"/>
                     <field name="endDate"/>
                     <field name="duration"/>

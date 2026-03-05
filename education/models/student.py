@@ -4,8 +4,9 @@ class educationStudent(models.Model):
     _name = 'education.student'
     _description = 'Student'
 
-    name = fields.Char(string='Name', required=True)
-    code = fields.Char(string='Code', required=True)
+    name = fields.Char(string='Name',required=True)
+    code = fields.Char(string='Code',required=True,unique=True)
+    batch_id = fields.Many2one('education.batch',string="Batch")
     age = fields.Integer(string='Age')
     phone = fields.Char(string='Phone')
     email = fields.Char(string='Email')

@@ -5,7 +5,7 @@ class educationProgram(models.Model):
     _description = "Program"
 
     programName = fields.Char(string="Program Name",required=True)
-    programCode = fields.Char(string="Program Code",required=True)
+    programCode = fields.Char(string="Program Code",required=True,unique=True)
     programText = fields.Text(string="Program Text")
     programDuration = fields.Float(string='Duration (Years)')
     programLevel = fields.Selection([

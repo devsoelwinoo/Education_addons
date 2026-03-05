@@ -8,6 +8,8 @@
             <field name="arch" type="xml">
                 <list string="Batch Tree">
                     <field name="batchName"/>
+                    <field name="student_ids"/>
+                    <field name="lecture_ids"/>
                     <field name="batchCode"/>
                     <field name="batchStartDate"/>
                     <field name="batchEndDate"/>
@@ -28,6 +30,8 @@
                         <group>
                             <group>
                                 <field name="batchName"/>
+                                <field name="student_ids"/>
+                                <field name="lecture_ids"/>
                                 <field name="batchCode"/>
                                 <field name="batchStartDate"/>
                                 <field name="batchEndDate"/>
@@ -50,6 +54,8 @@
             <field name="arch" type="xml">
                 <search string="Batch Search">
                     <field name="batchName"/>
+                    <field name="student_ids"/>
+                    <field name="lecture_ids"/>
                     <field name="batchCode"/>
                     <field name="batchStartDate"/>
                     <field name="batchEndDate"/>
