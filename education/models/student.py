@@ -13,3 +13,5 @@ class educationStudent(models.Model):
     dob = fields.Date(string='Date of Birth')
     gender = fields.Selection([('male', 'Male'),('female', 'Female')], string='Gender')
     address = fields.Text(string='Address')
+    course_id = fields.Many2one('education.course',string="Course")
+

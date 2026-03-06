@@ -3,3 +3,5 @@ access_education_student,access_education_student,model_education_student,,1,1,1
 access_education_lecture,access_education_lecture,model_education_lecture,,1,1,1,1
 access_education_batch,access_education_batch,model_education_batch,,1,1,1,1
 access_education_program,access_education_program,model_education_program,,1,1,1,1
+access_education_course,access_education_course,model_education_course,,1,1,1,1
+access_education_subject,access_education_subject,model_education_subject,,1,1,1,1
