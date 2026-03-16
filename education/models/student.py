@@ -14,4 +14,5 @@ class educationStudent(models.Model):
     gender = fields.Selection([('male', 'Male'),('female', 'Female')], string='Gender')
     address = fields.Text(string='Address')
     course_id = fields.Many2one('education.course',string="Course")
+    parent_id = fields.Many2one('education.parent',string="Gurdian")
 

@@ -3,10 +3,10 @@ from odoo import models,fields
 class educationBatch(models.Model):
     _name = "education.batch"
     _description = "Student"
+    _rec_name = "batchName"
 
     batchName = fields.Char(string="Batch Name",required=True)
     batchCode = fields.Char(string="Batch Code",required=True, unique=True)
-    lecture_ids = fields.One2many('education.lecture','batch_id',string ="Lecture")
     student_ids = fields.One2many(
         'education.student',
         'batch_id',

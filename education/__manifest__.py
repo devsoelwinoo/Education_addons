@@ -14,9 +14,10 @@
     "data": [
         "security/ir.model.access.csv",
         "views/education_student_view.xml",
-        "views/education_lecture_view.xml",
         "views/education_batch_view.xml",
         "views/education_program_view.xml",
-        "views/education_course_view.xml"
+        "views/education_course_view.xml",
+        "views/education_student_inherit_view.xml",
+        "views/education_parent_view.xml"
     ],
 }
