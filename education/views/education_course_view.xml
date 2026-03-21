@@ -52,6 +52,24 @@
                                 </field>
                             </page>
 
+                            <page string="Additional Info">
+                                <group>
+        
+                                    <!-- Left side -->
+                                    <group string="Academic Info">
+                                        <field name="courseTeacher"/>
+                                        <field name="courseDuration"/>
+                                    </group>
+
+                                    <!-- Right side -->
+                                    <group string="Fee Details">
+                                        <field name="payment_method"/>
+                                        <field name="discount"/>
+                                    </group>
+
+                                </group>
+                            </page>
+
                         </notebook>                       
                     </sheet>
                 </form>

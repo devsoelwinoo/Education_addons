@@ -158,15 +158,29 @@
                   action="action_education_student"
                   sequence="20"/>
 
+        <!-- Header title -->
+        <menuitem id="student_info_title"
+                  name="Students info"
+                  parent="menu_education_student"
+                  action="action_education_student"
+                  sequence="20"/>
+
+        <menuitem id="parent_info_title"
+                  name="Parent info"
+                  parent="menu_education_student"
+                  action="action_education_student"
+                  sequence="20"/>
+
+        <!-- Sub menu to open Student Log Notes -->
         <menuitem id="menu_student_list"
                  name="Student List"
-                 parent="menu_education_student"
+                 parent="student_info_title"
                  action="action_student"
                  sequence="1"/>
 
         <menuitem id="menu_parent_list"
                  name="Gurdian"
-                 parent="menu_education_student"
+                 parent="parent_info_title"
                  action="action_parent"
                  sequence="2"/>
     </data>

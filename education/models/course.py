@@ -11,4 +11,11 @@ class educationCourse(models.Model):
     subject_ids = fields.One2many('education.subject','course_id',string="Subject")
     student_ids = fields.One2many('education.student','course_id',string="Student")
 
+    payment_method = fields.Selection([
+        ('cash', 'Cash'),
+        ('bank', 'Bank'),
+    ], string="Payment Method")
+
+    discount = fields.Float(string="Discount")
+
     
